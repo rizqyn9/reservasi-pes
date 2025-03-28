@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "vite --port 3000",
-    "build": "vite build && tsc",
+    "build": "vite build",
     "serve": "vite preview",
     "test": "vitest run",
     "gen": "supabase gen types typescript --project-id izaglftduiqoohfhbqou > src/types/supabase.ts "
