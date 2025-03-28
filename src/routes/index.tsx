@@ -316,11 +316,16 @@ function Submission() {
     },
   })
 
-  const onSubmit = () => {
-    toast.promise(mutateAsync(), {
+  const onSubmit = async () => {
+    await toast.promise(mutateAsync(), {
       loading: "Menyimpan data",
       success: "Data berhasil disimpan",
       error: "Data gagal disimpan",
+    })
+  
+    router.navigate({
+      from: Route.fullPath,
+      search: (prev) => ({ ...prev, mode: "cart" }),
     })
   }
 
