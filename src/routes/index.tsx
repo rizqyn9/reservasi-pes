@@ -189,30 +189,32 @@ function SectionCategory() {
   const categoryId = useUiStore((s) => s.categoryId)
 
   return (
-    <div className="overflow-x-scroll flex gap-2 py-6 px-4 max-w-full">
-      {CATEGORIES.map((category) => {
-        const isSelected = categoryId === category.id
-        return (
-          <button
-            key={category.id}
-            className={cn(
-              "text-nowrap text-sm border px-2 py-1 rounded-full flex items-center transition-colors duration-300",
-              isSelected ? "bg-black text-white" : "text-black"
-            )}
-            onClick={() => {
-              useUiStore.setState({ categoryId: category.id })
-            }}
-          >
-            <div
+    <div className="w-full px-3">
+      <div className="overflow-scroll flex gap-2 py-6 max-w-screen">
+        {CATEGORIES.map((category) => {
+          const isSelected = categoryId === category.id
+          return (
+            <button
+              key={category.id}
               className={cn(
-                "size-1 rounded-full mr-2",
-                isSelected ? "bg-white" : "bg-gray-500"
+                "text-nowrap text-sm border px-2 py-1 rounded-full flex items-center transition-colors duration-300",
+                isSelected ? "bg-black text-white" : "text-black"
               )}
-            />
-            <h2 className="text-nowrap">{category.name}</h2>
-          </button>
-        )
-      })}
+              onClick={() => {
+                useUiStore.setState({ categoryId: category.id })
+              }}
+            >
+              <div
+                className={cn(
+                  "size-1 rounded-full mr-2",
+                  isSelected ? "bg-white" : "bg-gray-500"
+                )}
+              />
+              <h2 className="text-nowrap">{category.name}</h2>
+            </button>
+          )
+        })}
+      </div>
     </div>
   )
 }
