@@ -1,5 +1,17 @@
 export const PRODUCTS = [
   {
+    id: "ceria-berdua-ikkiben",
+    name: "Ceria Berdua Ikkiben",
+    price: 102000,
+    categoryId: "ramadhan",
+  },
+  {
+    id: "ceria-berdua-steak",
+    name: "Ceria Berdua Steak",
+    price: 98000,
+    categoryId: "ramadhan",
+  },
+  {
     id: "beef-teriyaki-nasi",
     name: "Beef Teriyaki Nasi",
     price: 32000,
@@ -741,6 +753,7 @@ export const PRODUCTS = [
 
 export const CATEGORIES = [
   { id: "all", name: "Semua" },
+  { id: "ramadhan", name: "Ramadhan" },
   { id: "paket-ekonomis", name: "Paket Ekonomis" },
   { id: "alacarte", name: "Alacarte" },
   { id: "paket-ikkiben-new", name: "Paket IKKIBEN NEW" },
