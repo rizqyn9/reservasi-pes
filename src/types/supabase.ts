@@ -15,6 +15,8 @@ export type Database = {
           id: number
           items: Json | null
           name: string | null
+          name_alias: string | null
+          pax: number
           phone: string
           priceTotal: number | null
         }
@@ -23,6 +25,8 @@ export type Database = {
           id?: number
           items?: Json | null
           name?: string | null
+          name_alias?: string | null
+          pax?: number
           phone: string
           priceTotal?: number | null
         }
@@ -31,6 +35,8 @@ export type Database = {
           id?: number
           items?: Json | null
           name?: string | null
+          name_alias?: string | null
+          pax?: number
           phone?: string
           priceTotal?: number | null
         }
