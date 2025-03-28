@@ -322,7 +322,7 @@ function Submission() {
       success: "Data berhasil disimpan",
       error: "Data gagal disimpan",
     })
-  
+
     router.navigate({
       from: Route.fullPath,
       search: (prev) => ({ ...prev, mode: "cart" }),
@@ -348,6 +348,10 @@ function Submission() {
 }
 
 function SearchProduct() {
+  useEffect(() => {
+    useUiStore.setState({ search: "" })
+  }, [])
+
   return (
     <div className="px-3 py-4 sticky top-0 bg-white flex items-center gap-2">
       <Input
