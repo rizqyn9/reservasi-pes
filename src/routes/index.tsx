@@ -189,8 +189,11 @@ function SectionCategory() {
   const categoryId = useUiStore((s) => s.categoryId)
 
   return (
-    <div className="w-full px-3">
-      <div className="overflow-scroll flex gap-2 py-6 max-w-screen">
+    <div className="w-full px-3 relative">
+      <div
+        className="overflow-scroll flex gap-2 py-6"
+        style={{ maxWidth: "90vw" }}
+      >
         {CATEGORIES.map((category) => {
           const isSelected = categoryId === category.id
           return (
